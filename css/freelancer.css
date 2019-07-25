@@ -10388,6 +10388,11 @@ a.text-secondary:hover, a.text-secondary:focus {
   color: #11181f !important;
 }
 
+.text-tertiary {
+  color: #9f9f9f !important;
+  text
+}
+
 .text-success {
   color: #28a745 !important;
 }
