@@ -161,7 +161,7 @@ sup {
 }
 
 a {
-  color: #E63946;
+  color: #FF3300;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2615,8 +2615,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #E63946;
-  border-color: #E63946;
+  background-color: #FF3300;
+  border-color: #FF3300;
 }
 
 .btn-primary:hover {
@@ -3106,14 +3106,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-light {
-  color: #E63946;
-  border-color: #E63946;
+  color: #FF3300;
+  border-color: #FF3300;
 }
 
 .btn-outline-light:hover {
   color: #FFF;
-  background-color: #E63946;
-  border-color: #E63946;
+  background-color: #FF3300;
+  border-color: #FF3300;
 }
 
 .btn-outline-light:focus, .btn-outline-light.focus {
@@ -5183,7 +5183,7 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -0.125rem;
   line-height: 1.25;
-  color: #E63946;
+  color: #FF3300;
   background-color: #fff;
   border: 0.125rem solid #dee2e6;
 }
@@ -6922,7 +6922,7 @@ a.close.disabled {
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #E63946 !important;
+  background-color: #FF3300 !important;
 }
 
 .bg-secondary {
@@ -6936,7 +6936,7 @@ button.bg-secondary:focus {
 }
 
 .bg-tres {
-  background-color: #E63946 !important;
+  background-color: #FF3300 !important;
 }
 
 a.bg-tres:hover, a.bg-tres:focus,
@@ -10831,7 +10831,7 @@ a.text-dark:hover, a.text-dark:focus {
   top: 1rem;
   font-size: 3rem;
   line-height: 3rem;
-  color: #E63946;
+  color: #FF3300;
   opacity: 1;
 }
 
