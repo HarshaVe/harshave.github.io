@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+  <head>
+    <meta charset="utf-8">
+    <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width">
+    <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">
+    <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title>
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+		<style>
+			* {
+				font-family: sans-serif !important;
+			}
+		</style>
+	<![endif]-->
+
+
+    <!--[if !mso]><!-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <!--<![endif]-->
+
+    <!-- Web Font / @font-face : END -->
+
+    <!-- CSS Reset -->
+    <style>
+      /* What it does: Remove spaces around the email design added by some email clients. */
+
+      /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+
+      html,
+      body {
+        margin: 0 auto !important;
+        padding: 0 !important;
+        height: 100% !important;
+        width: 100% !important;
+        font-family: "Roboto", "Helvetica Nueu", helvetica, arial, sans-serif;
+      }
+
+      /* What it does: Stops email clients resizing small text. */
+
+      * {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      div,
+      p,
+      a,
+      li,
+      td {
+        -webkit-text-size-adjust: none;
+      }
+
+      /* What it does: Centers email on Android 4.4 */
+
+      div[style*="margin: 16px 0"] {
+        margin: 0 !important;
+      }
+
+      /* What it does: Stops Outlook from adding extra spacing to tables. */
+
+      table,
+      td {
+        mso-table-lspace: 0pt !important;
+        mso-table-rspace: 0pt !important;
+      }
+
+      /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper.  */
+
+      table {
+        border-spacing: 0 !important;
+        border-collapse: separate !important;
+        table-layout: fixed !important;
+        margin: 0 auto !important;
+        border-collapse: separate;
+      }
+
+      table table table {
+        table-layout: auto;
+      }
+
+      /* What it does: Uses a better rendering method when resizing images in IE. */
+
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+
+      /* What it does: A work-around for email clients meddling in triggered links. */
+
+      *[x-apple-data-detectors],
+      /* iOS */
+
+      .x-gmail-data-detectors,
+      /* Gmail */
+
+      .x-gmail-data-detectors *,
+      .aBn {
+        border-bottom: 0 !important;
+        cursor: default !important;
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+
+      .a6S {
+        display: none !important;
+        opacity: 0.01 !important;
+      }
+
+      /* If the above doesn't work, add a .g-img class to any image in question. */
+
+      img.g-img+div {
+        display: none !important;
+      }
+
+      /* What it does: Prevents underlining the button text in Windows 10 */
+
+      .button-link {
+        text-decoration: none !important;
+      }
+
+      .main-table-container {
+        width: 400px;
+      }
+
+      /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+
+      /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+      /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+
+      @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+        /* iPhone 6 and 6+ */
+        /*.email-container {
+                min-width: 375px !important;
+            }*/
+      }
+
+    </style>
+
+    <!-- Progressive Enhancements -->
+    <style>
+      /* What it does: Hover styles for buttons */
+
+      .button-td,
+      .button-a {
+        transition: all 100ms ease-in;
+      }
+
+      .button-td:hover,
+      .button-a:hover {
+        background: #649B35 !important;
+        border-color: #649B35 !important;
+      }
+
+      /* Media Queries */
+
+      @media screen and (max-width: 600px) {
+        .email-container {
+          width: 100% !important;
+          margin: auto !important;
+        }
+        .email-container h1 {
+          font-size: 24px!important;
+          line-height: 32px!important;
+        }
+        .email-container h2 {
+          font-size: 16px!important;
+          line-height: 24px!important;
+        }
+        .email-container h3 {
+          font-size: 24px!important;
+          line-height: 32px!important;
+        }
+        .certificate-container h1 {
+          font-size: 40px!important;
+          line-height: 40px!important;
+        }
+        .main-table-container {
+          width: 272px!important;
+        }
+        /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+        .fluid {
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        /* What it does: Forces table cells into full-width rows. */
+        .stack-column,
+        .stack-column-center {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          direction: ltr !important;
+        }
+        /* And center justify these ones. */
+        .stack-column-center {
+          text-align: center !important;
+        }
+        /* For the 2-column layout */
+        .email-container table {
+          table-layout: auto!important;
+        }
+        .email-container .trade-in-table {
+          max-width: 200px!important;
+        }
+        /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+        .center-on-narrow {
+          text-align: center !important;
+          display: block !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          float: none !important;
+        }
+        table.center-on-narrow {
+          display: inline-block !important;
+        }
+        /* What it does: Adjust typography on small screens to improve readability */
+        /* .email-container p {
+                font-size: 17px !important;
+                line-height: 22px !important;
+            } */
+        /*.email-container h1 {
+                font-size:24px!important;
+                line-height:32px!important;
+            }
+            .email-container h2 {
+                font-size: 18px!important;
+                line-height:26px!important;
+            } */
+      }
+
+    </style>
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+     </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+  </head>
+
+  <body width="100%" bgcolor="#f5f5f5" style="margin: 0; mso-line-height-rule: exactly;">
+    <!-- Visually Hidden Preview Text : BEGIN -->
+    <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all; font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;">
+      $15,544 Estimated Trade-In Value for your 2018 BMW 330E! 
+      <span>
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      </span>
+    </div>
+    <!-- Visually Hidden Preview Text : END -->
+
+    <!--[if mso]>
+    <style type=”text/css”>
+        td{font-family: Arial, sans-serif;}
+    </style>
+    <![endif]-->
+    <center style="width: 100%; background: #f5f5f5; text-align: left;">
+
+      <!-- Email Header / Logo Image : BEGIN -->
+      <table role="presentation" align="center" cellspacing="0" cellpadding="0" border="0" align="center" height="64" width="600" class="email-container">
+        <tbody>
+          <tr>
+            <td align="center" style="background-color:#3777BC;padding:0;margin:0;height:64px; display:block;text-align:center; box-shadow: 0px 1px 4px rgba(0,0,0,.15);">
+              <div id="img_logo">
+                <img alt="My Carfax" src="https://static.carfax.com/email_images/myx/cfx_logo_trademark.png" width="160" height="30" alt="Carfax Logo" border="0" style="width:160px;height:30px;margin-top:15px" ;>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table role="presentation" align="center" cellspacing="0" cellpadding="0" border="0" align="center" height="auto" width="600" class="email-container">
+        <tbody>
+          <tr>
+            <td align="center" style="background-color: #2C5F96; height:100%; padding:8px 8px; margin:0; display:block; text-align:center; box-shadow: 0px 1px 4px rgba(0,0,0,.15);">
+              <div style="display: block; height: 100%;	width: 100%; color: #FFFFFF;	font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;	font-size: 16px;	line-height: 24px;	text-align: center;">
+                Courtesy of
+                <strong></strong>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Email Body : BEGIN -->
+      <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
+        <tr>
+          <td bgcolor="#ffffff" align="center" style="padding-top:24px;padding-right:16px;padding-left:16px;">
+            <h1 style="font-size:24px;line-height:32px;color:#424242;padding:0;margin:0;font-weight:normal"> wants to buy your car!</h1>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" style="padding-top:24px;">
+            <table role="presentation" aria-hidden="true" width="400" cellspacing="0" cellpadding="10" border="0" align="center" style="margin: auto; width:400px;" class="email-container main-table-container">
+
+              <!-- 1 Column Text + Button : BEGIN -->
+              <tr>
+                <td bgcolor="#ffffff" style="padding-top:16px;padding-right:16px;padding-bottom:16px;padding-left:16px;border:1px solid #bdbdbd; text-align:center; border-radius:4px;" class="trade-in-table">
+                  <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%;" style="margin: auto;">
+                    <tr>
+                      <td align="center" bgcolor="#f5f5f5" style="padding-top:16px;padding-left:32px;padding-right:32px;border-radius:4px 4px 0 0">
+                        <img src="https://static.carfax.com/email_images/myx/cfx_logo_trademark.png" alt="CARFAX Logo" width="160" style="width:160px;height:auto;">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#f5f5f5" style="text-align:center;color:#282828;font-weight:bold;font-size:16px;padding-top: 4px; padding-bottom:14px;">
+                        HISTORY-BASED VALUE
+                      </td>
+                    </tr>
+                  </table>
+                  <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" class="certificate-container" style="margin: auto;">
+                    <tr>
+                      <td style="padding-left:16px; padding-right:16px; padding-top:16px; text-align:center;">
+                        
+                        <h1 style="font-family: Roboto, Helvetica, sans-serif; font-size: 56px; color: #49BF57; font-weight: 500!important;margin:0px 0; padding-top:8px;">$15,544</h1>
+                        <p style="margin: 0; padding-top:8px; font-family: Roboto, Helvetica, sans-serif; font-weight:500!important; font-size: 12px; color: #212121;">(Estimated Trade-In Value)</p>
+                        
+                        <p style="margin: 0; padding-top:8px;padding-bottom: 8px; font-family: Roboto, Helvetica, sans-serif; font-weight: 500!important; font-size: 20px; color: #212121;">2018 BMW 330E</p>
+                        <p style="margin: 0; font-family: Roboto, Helvetica, sans-serif; font-weight:normal; font-size: 12px;line-height:18px; color: #212121;text-align:center;">
+                           99,999 mi. |   Excellent Condition
+                          <br>
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" bgcolor="#ffffff" style="padding-top:24px; padding-bottom:40px">
+                  <div>
+                    <!--[if mso]>
+                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="someurl.com" style="height:48px;v-text-anchor:middle;width:174px;" arcsize="9%" stroke="f" fillcolor="#7DC243">
+                        <w:anchorlock/>
+                        <center>
+                    <![endif]-->
+                    <a href="someurl.com" style="background-color:#7DC243;border-radius:4px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:16px;font-weight:Medium;line-height:48px;text-align:center;text-decoration:none;width:174px;-webkit-text-size-adjust:none;">Unlock Your Offer</a>
+                    <!--[if mso]>
+                        </center>
+                    </v:roundrect>
+                    <![endif]-->
+                  </div>
+
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
+        <tr>
+          <td align="center">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td height="1" style="border-top:1px solid #E0E0E0; font-size:1px; height:1px; line-height:1px">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td align="center" bgcolor="#FAFAFA" style="padding:24px 12px 0; text-align:center;">
+            
+            <table>
+              <tr>
+                <td style="font-family: Roboto, Helvetica, sans-serif; font-size: 12px; color: #9e9e9e; padding-left:16px; padding-right:16px; text-align:center;">
+                  The value of used vehicles varies with mileage, usage and condition and should be used as an estimate. The CARFAX History-Based Value is based only on information supplied to CARFAX and available as of . Other information that may
+                  affect the value may not have been reported to CARFAX.
+                </td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="bottom" bgcolor="#FAFAFA" style="padding-top:24px;">
+            <img src="https://static.carfax.com/email_images/myx/carfox_torso_2019.png" alt="" width="200" style="display:block">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td height="1" style="border-top:1px solid #E0E0E0; font-size:1px; height:1px; line-height:1px">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <!-- footer -->
+      <table style="background-color: #f5f5f5;" role="presentation" align="center" cellspacing="0" cellpadding="0" border="0" align="center" width="600" class="email-container">
+        <tbody>
+          <tr>
+            <td align="center" style="background-color: #f5f5f5;padding:0 16px; margin:0px; padding-top: 24px; display:block; text-align:center; ">
+              <div id="welcome-fineprint" style="height: 100%;	width: 100%; max-width: 442px; min-width: 288px; color: #9e9e9e;	font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;	text-align: center;	margin:0 auto; font-size: 12px; line-height: 18px;">
+                This is a promotional message from
+                <a href=></a> &amp;
+                <a href="http://clicks.email.carfax.com/ls/click?upn=Otdqod-2FUvXlM18lPExGlQViOCIGn8RP8tAREhmliPUw-3D62xD_QwyzQ5xaEX63sDvAMyC-2FiJZ7iYoEwQdSR2pZidbUg7XsBOPGEhOXJuKh-2FR0RGITGCinxP3-2F1rqwpdlnZK54hTgRj0dvWLbL2nPD7bthdISyG2Wd9OitH8WHa42gk-2BL9uR78ke5kCPDrLUV-2FFii4BfTIt6QJWoHUn20rGwab1Bn1nz0W6Tp7W1Iu5SZqTZgj8vVJr-2FzqQ9A9lGzkDfRLpCTR5gzGiniER2v8PyCjQr58IRR0vDOVETtJG1eXhjkq82yfNYdfEjiB2yeAkM7aOIaJW0A6Gyv-2BF-2BRpfD3jh49tnrbSrSjzgpZVVmcFxj-2FAo-2FbTL7qvrMmTYScUo1izH1ZNR64jPmIDk6iujv-2Fj8sZQL8SfbFaijxbYVj8KoaY3o0sL1dz1eoo-2BFmJ5AHJMzj90nFsI-2FftN45xd97hqaHKUxYbXRC4bPKFCnmmeh5NzoJYAD1fYpWvUahiuDeJK5vgu3-2BZapl-2BPtoDDRE4PR7g9hqjeRpsIBbtcMEpjmQH3UWaMth6G-2BUZP9K3fmz8Zd6ijAmiA9Y2mZwkPcvNNhB5hya90SW5e69AqNehw2OO7wFmtrUZBHZu8Jq1ZyWXoyUjQsxC13Zd-2FC6h7sWVgg7XK8nTFvGV65H068M2zQZ9zSzru-2BtQZKwskoU3rEPVTpcHV9HHQs-2FaMjsQhtP6z8lDyPaY9GtfMzhAeCcV8UyzuLRzH8LxcMZOTtvjL6Ckv9tA-3D-3D">CARFAX, Inc.</a> This message was sent to emailfox.runme@previews.emailonacid.com. You are receiving this message because of your past vehicle purchase or service with&nbsp;
+                <a href=></a>, , ,  . If you no longer wish to receive these emails, let us know and we'll take care of the rest.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-color: #f5f5f5;padding:0;margin:0px; padding: 18px 0; display:block;text-align:center; ">
+              <div id="welcome-unsubscribe" style="height: 100%;	width: 100%; max-width: 442px; min-width: 288px;	color: #9e9e9e;	font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;	text-align: center;	margin:0 auto; font-size: 12px; line-height: 18px;">
+                <a href="" style="text-decoration: underline;">Unsubscribe</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-color: #f5f5f5;padding:0;margin:0px; padding-top: 8px; height:70px; display:block;text-align:center; ">
+              <div id="welcome-address" style="height: 100%;	width: 100%; max-width: 442px; min-width: 288px; color: #9e9e9e;	font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;	text-align: center;	margin:0 auto; font-size: 12px; line-height: 18px;">
+                CARFAX Inc.
+                <br /> 5860 Trinity Parkway, Suite 600
+                <br /> Centreville, VA 20120
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+  
+<img src="http://clicks.email.carfax.com/wf/open?upn=Vez9P2TOM2S6fcQtvfJSQbNlymZmZkBu597j4-2Fqsc5z7xOE-2FtJshDhXtPEPtcXXjJ0MbV4DuXRBlp8Iq8TeY-2F5xBSA1hEyvCkQ2yMmzXtrdXObBfU1hH8oA621faSybLcGRM0Sat4RYfVaprWNUYEORUkatE9aCu6nc5SHPhTjuYFX2jRuQTsEFCUnZo27PmDCptOagj4UvwBwFyvF4dF0ppbKdoO3miWGtL-2FuoMzOuSbyG5XlRn8Q34gV-2F1j4vJW0EY8ghDLpHVVZ6KjAGtsP4r1GSxqdVXqOdmWjjDe-2FSZhp47xmOhLROuE3PTseg0bPWI-2BN2vXGL4pVp-2FvA2OZEH1bywLvdOoaDvYWagEbRb3aVE1WfQPZ7i78CPL80u-2FDq-2BzOKsvpWdB05YArKQDDZTFhyF6ubVXCC8SX1wTUo97M1KomSqyb3Y2OZZoYMr9ubwRgS6vvIiwFgr8fYlJaVp58SFWB5-2BVFYOu0IeJZRu8H9MZ-2F6bXKlDDXCOKA0V1C-2BET2y9stvwBxCMNnzi8EhRJdooECV48m3F8N-2FYFheNl-2BnhS4gw21e-2FhvW3EZZlfdjAgomuLTPhUnV-2BqUtuQKMVPtdhImvj6KXdRE0cV6615XkU3n2uAR8ryVVimpXAlQri2EmiZIx21q5jktRN-2Be37tzgzC2tHPe8toSjYHxVttO7ORl06FJBHlNte9jGfqAauvDmi2M0T7wyvwoJbFPw-3D-3D" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/>
+</body>
+
+</html>
+
